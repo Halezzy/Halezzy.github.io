@@ -24,6 +24,11 @@ body {
 .card {
   flex: 1;
 }
+#images{
+width:300px;
+  
+}
+
 
 .image {
   width: 100%;
