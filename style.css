@@ -24,13 +24,9 @@ body {
 .card {
   flex: 1;
 }
-#images{
-width:300px;
-  
-}
-
 
 .image {
   width: 100%;
-  height: auto;
+  height: 300px;
+  object-fit: cover;
 }
