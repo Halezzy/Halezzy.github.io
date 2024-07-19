@@ -19,19 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Utilizando features do ES6+: template literals, arrow functions, e destructuring
       imagesDiv.innerHTML = data1.map(({ url }) => `
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="${url}" alt="Cat Image">
-              </figure>
-            </div>
-          </div>
+        <div class="flex-item">
+          <figure class="image is-128x128">
+            <img src="${url}" alt="Cat Image">
+          </figure>
         </div>
       `).join('');
 
       breedsDiv.innerHTML = data2.slice(0, 5).map(({ name, description }) => `
-        <div class="column is-half">
+        <div class="flex-item">
           <div class="card">
             <div class="card-content">
               <p class="title">${name}</p>
@@ -42,14 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
       `).join('');
 
       randomCatDiv.innerHTML = `
-        <div class="column is-full">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="${data3[0].url}" alt="Random Cat Image">
-              </figure>
-            </div>
-          </div>
+        <div class="flex-item">
+          <figure class="image is-128x128">
+            <img src="${data3[0].url}" alt="Random Cat Image">
+          </figure>
         </div>
       `;
     } catch (error) {
